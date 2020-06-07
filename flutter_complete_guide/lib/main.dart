@@ -13,19 +13,34 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+
+    static const _questions = const [
+    {
+      'questionText': 'What\'s your favorite collor?',
+      'answer': ['Black', 'Red', 'Green', 'White'],
+    },
+    {
+      'questionText': 'What\'s your favorite animal?',
+      'answer': ['Rabbit', 'Snake', 'Elephant', 'Lion'],
+    },
+    {
+      'questionText': 'Who\'s your favorite instructor?',
+      'answer': ['Max', 'Max', 'Max', 'Max'],
+    }
+  ];
   var _questionIndex = 0;
 
   void _answerQuestions() {
+    if (_questionIndex < _questions.length) {
+      print('You have more questions??');
+    }
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
     print(_questionIndex);
   }
 
-  var _questions = [
-    'What\'s your favorite collor?',
-    'What\'s your favorite animal?'
-  ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -37,10 +52,12 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           children: [
             //Text(_questions[_questionIndex]),
-            Question(_questions[_questionIndex]),
-            Answer(_answerQuestions),
-            Answer(_answerQuestions),
-            Answer(_answerQuestions),
+            Question(
+              _questions[_questionIndex]['questionText'],
+            ),
+            ...(_questions[_questionIndex]['answer']as List<String>).map((answer){
+              return Answer(_answerQuestions,answer);
+            }).toList()
           ],
         ),
       ),
