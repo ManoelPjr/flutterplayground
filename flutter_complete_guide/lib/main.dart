@@ -35,8 +35,8 @@ class _MyAppState extends State<MyApp> {
     {
       'questionText': 'Who\'s your favorite instructor?',
       'answer': [
-        {'text': 'Max', 'score': 1},
-        {'text': 'Max', 'score': 1},
+        {'text': 'Manoel', 'score': 1},
+        {'text': 'Manoel', 'score': 1},
         {'text': 'Max', 'score': 1},
         {'text': 'Max', 'score': 1},
       ],
@@ -71,7 +71,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My First App.'),
+          title: Text('Strange Quiz!'),
         ),
         body: _questionIndex < _questions.length
             ? Quiz(
