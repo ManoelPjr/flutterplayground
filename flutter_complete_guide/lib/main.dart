@@ -15,25 +15,25 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   static const _questions = const [
     {
-      'questionText': 'What\'s your favorite collor?',
+      'questionText': 'Qual a sua cor favorita?',
       'answer': [
-        {'text': 'Black', 'score': 10},
-        {'text': 'Red', 'score': 5},
-        {'text': 'Green', 'score': 3},
-        {'text': 'White', 'score': 1},
+        {'text': 'Preto', 'score': 10},
+        {'text': 'Vermelho', 'score': 5},
+        {'text': 'Verde', 'score': 3},
+        {'text': 'Branco', 'score': 1},
       ],
     },
     {
-      'questionText': 'What\'s your favorite animal?',
+      'questionText': 'Qual o seu animal favorito?',
       'answer': [
-        {'text': 'Rabbit', 'score': 3},
-        {'text': 'Snake', 'score': 11},
-        {'text': 'Elephant', 'score': 5},
-        {'text': 'Lion', 'score': 9},
+        {'text': 'Coelho', 'score': 3},
+        {'text': 'Cobra', 'score': 11},
+        {'text': 'Elefante', 'score': 5},
+        {'text': 'Leão', 'score': 9},
       ],
     },
     {
-      'questionText': 'Who\'s your favorite instructor?',
+      'questionText': 'Qual o seu instrutor favorito!!!',
       'answer': [
         {'text': 'Manoel', 'score': 1},
         {'text': 'Manoel', 'score': 1},

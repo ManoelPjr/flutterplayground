@@ -10,13 +10,13 @@ class Result extends StatelessWidget {
     //var resultText = 'You did it!'; not good pratice
     String resultText;
     if (resultScore <= 8) {
-      resultText = 'You are awesome and innocent!';
+      resultText = 'Você é incrível e inocente!';
     } else if (resultScore <= 12) {
-      resultText = 'Pretty likeable!';
+      resultText = 'Bastante simpático!';
     } else if (resultScore <= 16) {
-      resultText = 'You are ... strange?!';
+      resultText = 'Você é... estranho?!';
     } else {
-      resultText = 'You are so bad!';
+      resultText = 'Tu és tão mau!';
     }
     return resultText;
   }
