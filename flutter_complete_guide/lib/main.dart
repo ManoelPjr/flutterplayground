@@ -60,9 +60,9 @@ class _MyAppState extends State<MyApp> {
     });
     print(_questionIndex);
     if (_questionIndex < _questions.length) {
-      print('You have more questions...');
+      print('Você tem mais perguntas...');
     } else {
-      print('No more questions!!');
+      print('Não há mais perguntas!!');
     }
   }
 
@@ -71,7 +71,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Strange Quiz!'),
+          title: Text('Quiz Estranho!'),
         ),
         body: _questionIndex < _questions.length
             ? Quiz(
