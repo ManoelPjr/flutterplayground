@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import './transaction.dart';
 
@@ -32,6 +33,11 @@ class MyHomePage extends StatelessWidget {
       date: DateTime.now(),
     ),
   ];
+/*   String titleInput;
+  String amountInput; */
+  final titleController = TextEditingController();
+  final amountController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,15 +67,23 @@ class MyHomePage extends StatelessWidget {
                     decoration: InputDecoration(
                       labelText: 'Title:',
                     ),
+/*                     onChanged: (val){
+                      titleInput = val;
+                    }, */
+                    controller: titleController,
                   ),
                   TextField(
                     decoration: InputDecoration(
                       labelText: 'Amount:',
                     ),
+                    //onChanged: (val)=> amountInput = val,
+                    controller: amountController,
                   ),
                   FlatButton(
                     textColor: Colors.purple,
-                    onPressed: () {},
+                    onPressed: () {
+                      print(titleController.text);
+                    },
                     child: Text('Add Transaction'),
                   ),
                 ],
